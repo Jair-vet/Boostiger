@@ -112,12 +112,12 @@ img {
 .card__title, 
 .card__preci, 
 .card__description {
-  transition: .5s;
+  transition: .7s;
 }
 
 /* Hover card effect */
 .card:hover .card__img {
-  transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+  transform: translate(-1.5rem, -9.5rem) rotate(1deg);
 }
 
 .card:hover .card__data {
@@ -131,10 +131,40 @@ img {
 
 .card:hover .card__preci {
   transform: translateX(-6.8rem);
+  font-size: 40px;
 }
 
 .card:hover .card__description, 
 .card:hover .card__button {
   transition-delay: .2s;
   opacity: 1;
+}
+
+@media (max-width: 768px) {  
+    .container{
+        flex-direction: column;
+    }
+    .card:hover .card__img {
+        transform: translate(-1.5rem, -5.5rem) rotate(1deg);
+      }
+      
+      .card:hover .card__data {
+        transform: translateY(4.8rem);
+      }
+      
+      .card:hover .card__title {
+        transform: translateX(-2.3rem) translateY(1rem);
+        margin-bottom: 0;
+      }
+      
+      .card:hover .card__preci {
+        transform: translateX(-3.8rem);
+        font-size: 40px;
+      }
+      
+      .card:hover .card__description, 
+      .card:hover .card__button {
+        transition-delay: .2s;
+        opacity: 1;
+      }
 }
